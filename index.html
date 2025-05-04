@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Our Love Story</title>
+  
+  <!-- Load fonts with standard method -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  
+  <style>
+    :root {
+      --primary: #ff6b8b;
+      --secondary: #ff8e9e;
+      --accent: #ff4c7c;
+      --light: #fff9fa;
+      --dark: #333;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff9fa;
+    }
+    
+    /* Simple container with no animations initially */
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 3rem;
+      background-color: white;
+      border-radius: 2rem;
+      box-shadow: 0 15px 50px rgba(255, 107, 139, 0.2);
+      text-align: center;
+      position: relative;
+    }
+    
+    .title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .subtitle {
+      font-family: 'Parisienne', cursive;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 2.5rem;
+    }
+    
+    .message {
+      font-size: 1.3rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+    }
+    
+    .enter-btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      border-radius: 3rem;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 20px rgba(255, 107, 139, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .enter-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(255, 107, 139, 0.4);
+    }
+    
+    .heart-icon {
+      display: inline-block;
+      margin: 0 0.3rem;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem;
+      }
+      
+      .title {
+        font-size: 3.5rem;
+      }
+      
+      .subtitle {
+        font-size: 2rem;
+      }
+      
+      .message {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Simple container with no initial animations -->
+  <div class="container">
+    <h1 class="title">pottikanna.2819</h1>
+    <h2 class="subtitle">A Love Story That Found Its Way Back... <span class="heart-icon">❤️</span></h2>
+    <p class="message">
+      Sometimes the universe conspires to bring two souls together,<br>
+      weaving a journey of love across differences and distances.<br>
+      Ours is a tale of patience, courage, and destiny.<br>
+      Join us as we share our special moments.
+    </p>
+    <a href="./pottikanna.html" class="enter-btn">Click here to know our story <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+  <script>
+    // Only add simple animations after page is fully loaded
+    window.addEventListener('load', function() {
+      // Wait an extra second to ensure everything is stable
+      setTimeout(function() {
+        // Now that everything is stable, we can safely add some basic animations
+        document.querySelector('.heart-icon').innerHTML = '❤️';
+        
+        // Add heart beat animation
+        const heartStyle = document.createElement('style');
+        heartStyle.textContent = `
+          @keyframes heartBeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.3); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.3); }
+            70% { transform: scale(1); }
+          }
+          .heart-icon {
+            animation: heartBeat 1.5s infinite;
+          }
+          
+          body {
+            background: linear-gradient(135deg, rgba(255, 230, 235, 0.8), rgba(255, 255, 255, 0.9)), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff8e9e' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+          }
+          
+          .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+          }
+        `;
+        document.head.appendChild(heartStyle);
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

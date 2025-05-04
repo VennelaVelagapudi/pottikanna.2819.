@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pottikanna.2819</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;600&family=Chewy&family=Fredoka+One&family=Baloo+2:wght@700&family=Bubblegum+Sans&family=Great+Vibes&family=Parisienne&family=Playball&family=Sacramento&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary: #ff6b8b;
+      --secondary: #ff8e9e;
+      --accent: #ff4c7c;
+      --light: #fff9fa;
+      --dark: #333;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, #ff8e9e, #ff4c7c);
+      position: relative;
+      padding: 2rem 2rem;
+      text-align: center;
+      color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E") repeat;
+      opacity: 0.3;
+    }
+    
+    .heart-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      opacity: 0.05;
+    }
+    
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 5.5rem;
+      margin-bottom: 0.2rem;
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1.5s;
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
+    
+    .tagline {
+      font-family: 'Parisienne', cursive;
+      font-size: 2rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 2s;
+      font-weight: 300;
+      letter-spacing: 1px;
+      margin-top: 0;
+    }
+    
+    .heart-icon {
+      display: inline-block;
+      animation: pulse 2s infinite;
+      color: white;
+      font-size: 1.5rem;
+    }
+    
+    /* Main Content Styles */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+    }
+    
+    .section {
+      margin: 4rem 0 2rem;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .section:hover {
+      transform: translateY(-5px);
+    }
+    
+    .section h2 {
+      color: var(--accent);
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-family: 'Pacifico', cursive;
+      font-weight: 400;
+      font-size: 2.8rem;
+    }
+    
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    
+    .section p {
+      font-size: 1.3rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .distance-section {
+      padding: 4rem 2rem;
+      background-color: #fff9fa;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .map-container {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      margin: 0 auto;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    
+    /* Photo Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 2rem;
+      margin-bottom: 0;
+    }
+    
+    .photo-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: none;
+      height: auto;
+      padding-bottom: 0;
+      background: none;
+      transition: transform 0.3s ease;
+    }
+    
+    .photo-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .photo-card img {
+      position: static;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      background: none;
+      transition: transform 0.5s ease;
+    }
+
+    .photo-card:hover img {
+      transform: scale(1.05);
+    }
+    
+    .photo-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent);
+      padding: 20px 20px 20px 30px;
+      color: var(--dark);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .photo-card:hover .photo-overlay {
+      opacity: 1;
+    }
+    
+    .photo-overlay h3 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: #b4aaaa;
+      margin-left: 10px;
+      font-weight: 300;
+    }
+
+    .photo-overlay p {
+      color: #b4aaaa;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-left: 10px;
+      font-weight: 300;
+    }
+    
+    .individual-photos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .individual-photo {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      width: 100%;
+      height: auto;
+    }
+
+    .individual-photo:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(255, 107, 139, 0.2);
+    }
+
+    .individual-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .individual-photo:hover img {
+      transform: scale(1.1);
+    }
+
+    .individual-photo .name-tag {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      padding: 1.5rem;
+      color: white;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .individual-photo:hover .name-tag {
+      transform: translateY(0);
+    }
+
+    .name-tag h3 {
+      font-family: 'Sacramento', cursive;
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .name-tag p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    /* Music Section */
+    .music-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+    
+    .music-item {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(45deg, #fff9fa, #fff);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .music-item-content {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .music-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .music-progress-container {
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .music-progress {
+      flex-grow: 1;
+      height: 4px;
+      background: rgba(255, 107, 139, 0.2);
+      border-radius: 2px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .music-progress-bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: var(--primary);
+      border-radius: 2px;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+    
+    .music-time {
+      font-size: 1rem;
+      color: #666;
+      min-width: 80px;
+      text-align: right;
+    }
+    
+    .music-waves {
+      position: static;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      height: 30px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      margin-right: 1rem;
+    }
+
+    .music-item.playing .music-waves {
+      opacity: 1;
+    }
+
+    .wave {
+      width: 3px;
+      background: var(--primary);
+      border-radius: 3px;
+      animation: wave 1s ease-in-out infinite;
+    }
+
+    .wave:nth-child(1) { height: 10px; animation-delay: 0.1s; }
+    .wave:nth-child(2) { height: 20px; animation-delay: 0.2s; }
+    .wave:nth-child(3) { height: 15px; animation-delay: 0.3s; }
+    .wave:nth-child(4) { height: 25px; animation-delay: 0.4s; }
+    .wave:nth-child(5) { height: 18px; animation-delay: 0.5s; }
+
+    @keyframes wave {
+      0%, 100% { transform: scaleY(0.5); }
+      50% { transform: scaleY(1.5); }
+    }
+    
+    /* Play Button Styles */
+    .play-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(255, 107, 139, 0.3);
+    }
+    
+    .play-button:hover {
+      background-color: var(--accent);
+      transform: scale(1.1);
+    }
+    
+    .play-button i {
+      font-size: 1rem;
+    }
+    
+    .play-button.playing {
+      background-color: var(--accent);
+    }
+    
+    /* Audio Player */
+    .audio-player {
+      display: none;
+    }
+    
+    /* Timeline Section */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+    
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+      border-radius: 2px;
+    }
+    
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border: 4px solid var(--primary);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .timeline-left {
+      left: 0;
+    }
+    
+    .timeline-right {
+      left: 50%;
+    }
+    
+    .timeline-left::after {
+      right: -13px;
+    }
+    
+    .timeline-right::after {
+      left: -13px;
+    }
+    
+    .timeline-content {
+      padding: 20px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .timeline-date {
+      font-family: 'Pacifico', cursive;
+      color: var(--primary);
+      font-weight: 400;
+      font-size: 2.5rem;
+      order: 1;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      letter-spacing: 1px;
+    }
+    
+    .timeline-content h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #666;
+      font-size: 1.3rem;
+      margin: 0;
+      order: 2;
+      font-weight: 400;
+    }
+    
+    .timeline-content p {
+      color: #777;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0;
+      order: 3;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+    }
+    
+    /* Footer Styles */
+    footer {
+      background: linear-gradient(135deg, #ff6b8b, #ff4c7c);
+      color: white;
+      text-align: center;
+      padding: 0.05rem 1rem 1rem 1rem;
+      margin-top: auto;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      background-color: white;
+      color: var(--primary);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .copyright {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .heart-beat {
+      display: inline-block;
+      color: white;
+      animation: heartBeat 1.5s infinite;
+    }
+    
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .footer-link:hover {
+      color: #ffe6eb;
+      text-decoration: underline;
+    }
+    
+    /* Counter Section */
+    .counter-section {
+      text-align: center;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, #ffe6eb, #fff);
+      border-radius: 20px;
+      margin: 4rem auto;
+      max-width: 900px;
+      box-shadow: 0 15px 30px rgba(255, 107, 139, 0.1);
+    }
+    
+    .counter-title {
+      color: var(--accent);
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+    }
+    
+    .counter-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    
+    .counter-item {
+      width: 150px;
+    }
+    
+    .counter {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .counter-label {
+      font-size: 1.2rem;
+      color: #777;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    
+    @keyframes heartBeat {
+      0% { transform: scale(1); }
+      14% { transform: scale(1.3); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.3); }
+      70% { transform: scale(1); }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 4rem;
+      }
+      
+      .tagline {
+        font-size: 1.7rem;
+      }
+      
+      .section h2 {
+        font-size: 2.2rem;
+      }
+      
+      .section p {
+        font-size: 1.1rem;
+      }
+      
+      .counter-title {
+        font-size: 2.2rem;
+      }
+      
+      .counter {
+        font-size: 2.8rem;
+      }
+      
+      .counter-label {
+        font-size: 1.1rem;
+      }
+      
+      .timeline-date {
+        font-size: 1.5rem;
+      }
+      
+      .timeline::after {
+        left: 31px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-left::after, .timeline-right::after {
+        left: 15px;
+      }
+      
+      .timeline-right {
+        left: 0;
+      }
+      
+      .counter-container {
+        gap: 1rem;
+      }
+      
+      .counter-item {
+        width: 120px;
+      }
+      
+      .container {
+        max-width: 100%;
+        padding: 1rem 1rem 0;
+      }
+      
+      .section {
+        margin: 2rem 0 1rem;
+      }
+      
+      .gallery {
+        gap: 10px;
+        margin-top: 1rem;
+      }
+      
+      .photo-card {
+        margin: 0;
+        padding: 0;
+        background: none;
+      }
+
+      .photo-card img {
+        border-radius: 15px;
+        margin: 0;
+        background: none;
+        min-height: 0;
+      }
+
+      .photo-overlay {
+        background: none;
+        padding: 10px 0;
+      }
+      
+      .photo-overlay h3 {
+        color: #b4aaaa;
+        font-weight: 300;
+      }
+      
+      .photo-overlay p {
+        color: #777;
+        font-weight: 300;
+      }
+      
+      .individual-photos {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .individual-photo {
+        margin-bottom: 2rem;
+        touch-action: manipulation;
+      }
+
+      .individual-photo:active {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(255, 107, 139, 0.2);
+      }
+
+      .individual-photo:active img {
+        transform: scale(1.1);
+      }
+
+      .individual-photo:active .name-tag {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="animate__animated animate__fadeIn">pottikanna.2819</h1>
+    <div class="tagline animate__animated animate__fadeIn animate__delay-1s">Kanna & Potti Forever <span class="heart-icon">❤️</span></div>
+  </header>
+
+  <div class="container">
+    <!-- Our Story Section -->
+    <div class="section animate__animated animate__fadeInUp">
+      <h2>Our Story</h2>
+      <p>
+        Somewhere between teasing me as 'potti' and calling him 'kanna', we built a little universe of love,
+        laughter, and late-night songs. Every moment together has been a beautiful chapter in our journey.
+        Through ups and downs, celebrations and challenges, we've created a love story that's uniquely ours.
+        No matter where life takes us, 'pottikanna.2819' will always be my favorite place.
+      </p>
+      <p>
+        We are a Hindu girl and a Muslim boy — two souls from different traditions, bound by something deeper than rituals:
+        mutual respect, emotional depth, and fearless love.
+        My traditional bindi, expressive eyes, and saree shimmer beside his simple elegance in a kurta and cap — two worlds, beautifully in sync.
+        This isn't just a love story. It's a quiet rebellion against norms, a tender blend of courage, culture, and connection.
+      </p>
+    </div>
+
+    <!-- Counter Section -->
+    <div class="counter-section animate__animated animate__fadeInUp">
+      <h2 class="counter-title">Our Journey in Numbers</h2>
+      <div class="counter-container">
+        <div class="counter-item">
+          <div class="counter" id="years-counter">0</div>
+          <div class="counter-label">Years</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter" id="months-counter">0</div>
+          <div class="counter-label">Months</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter" id="days-counter">0</div>
+          <div class="counter-label">Days</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <div class="section animate__animated animate__fadeInUp">
+      <h2>Our Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-item timeline-left">
+          <div class="timeline-content">
+            <div class="timeline-date">First Meeting</div>
+            <h3>March 2018</h3>
+            <p>Chatted, laughed, and shared moments… until life got busy.</p>
+          </div>
+        </div>
+        <div class="timeline-item timeline-right">
+          <div class="timeline-content">
+            <p>Then life happened…
+              Days turned into months… months into years.
+              No messages. No calls. Just memories tucked away..</p>
+          </div>
+        </div>
+        <div class="timeline-item timeline-left">
+          <div class="timeline-content">
+            <div class="timeline-date">Reunion</div>
+            <h3>April 19 2023</h3>
+            <p>One message… and the story restarted.</p>
+            <p>This time, we didn’t just chat… we fell in love. ❤️</p>
+          </div>
+        </div>
+        <div class="timeline-item timeline-right">
+          <div class="timeline-content">
+            <div class="timeline-date">The First Meet</div>
+            <h3>July 3rd, 2023</h3>
+            <p>The day we saw each other in person for the first time...</p>
+            <p>From that day… meeting you became my favorite part of life.</p>
+          </div>
+        </div>
+        <div class="timeline-item timeline-left">
+          <div class="timeline-content">
+            <div class="timeline-date">The proposal</div>
+            <h3>September 3rd, 2023</h3>
+            <p>Under the stars, on the terrace…
+              he whispered those magical words.</p>
+            <p>I said… YES❤️</p>
+          </div>
+        </div>
+        <div class="timeline-item timeline-right">
+          <div class="timeline-content">
+            <div class="timeline-date">Forever & Always</div>
+            <p>No matter where life takes us…
+              No distance, no time, nothing can change what we have.
+              You are my today, my tomorrow, my always.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Music Section -->
+    <div class="section animate__animated animate__fadeInUp">
+      <h2>Our Favorite Songs</h2>
+      <p>The soundtrack to our love story that always brings back the sweetest memories.</p>
+      <ul class="music-list">
+        <li class="music-item">
+          <div class="music-item-content">
+            <div class="music-info">
+              <span class="music-icon">🎵</span>
+              <span class="music-title">Jabili Kosam</span>
+              <div class="music-waves">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+              </div>
+            </div>
+            <button class="play-button" data-song="jabili-kosam" aria-label="Play Jabili Kosam">
+              <i class="fas fa-play" id="jabili-kosam-icon"></i>
+            </button>
+          </div>
+          <div class="music-progress-container">
+            <div class="music-progress" data-song="jabili-kosam">
+              <div class="music-progress-bar"></div>
+            </div>
+            <span class="music-time" id="jabili-kosam-time">0:00 / 0:00</span>
+          </div>
+          <audio id="jabili-kosam-audio" class="audio-player">
+            <source src="./Jabilli Kosam (Male) - SenSongsMp3.Co.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+        <li class="music-item">
+          <div class="music-item-content">
+            <div class="music-info">
+              <span class="music-icon">🎵</span>
+              <span class="music-title">Edhemaina Sakha</span>
+              <div class="music-waves">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+              </div>
+            </div>
+            <button class="play-button" data-song="edhemaina-sakha" aria-label="Play Edhemaina Sakha">
+              <i class="fas fa-play" id="edhemaina-sakha-icon"></i>
+            </button>
+          </div>
+          <div class="music-progress-container">
+            <div class="music-progress" data-song="edhemaina-sakha">
+              <div class="music-progress-bar"></div>
+            </div>
+            <span class="music-time" id="edhemaina-sakha-time">0:00 / 0:00</span>
+          </div>
+          <audio id="edhemaina-sakha-audio" class="audio-player">
+            <source src="./[iSongs.info] 04 - Yedemaina Sakha.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Individual Photos Section -->
+    <div class="section animate__animated animate__fadeInUp">
+      <h2>Our Beautiful Souls</h2>
+      <p>Two hearts that found each other in this vast universe.</p>
+      <div class="individual-photos">
+        <div class="individual-photo">
+          <img src="./kanna.jpg" alt="Kanna" />
+          <div class="name-tag">
+            <h3>Kanna</h3>
+            <p style="color: #ffe6eb;">The constant issue solver</p>
+          </div>
+        </div>
+        <div class="individual-photo">
+          <img src="./IMG-20250322-WA0044.jpg" alt="Potti" />
+          <div class="name-tag">
+            <h3>Potti</h3>
+            <p style="color: #ffe6eb;">The constant trouble maker</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="distance-section" style="text-align: center; padding: 3rem 1rem; background-color: #fff0f5;">
+      <h2 style="color: var(--accent); position: relative; display: inline-block; margin-bottom: 1.5rem; font-family: 'Pacifico', cursive; font-weight: 400; font-size: 2.8rem;">
+        Distance Between Us
+      </h2>
+      <p style="font-size: 1.2rem; color: #555; max-width: 600px; margin: 0 auto 2rem;">
+        The journey isn’t far, but the days between our meetings feel endless.</p>
+        <p style="font-size: 1.2rem; color: #555; max-width: 600px; margin: 0 auto 2rem;">Yet in our minds and hearts, we meet every day — in little thoughts and midnight dreams.</p>
+        <p style="font-size: 1.2rem; color: #555; max-width: 600px; margin: 0 auto 2rem;">Here's a little glimpse of the world between us.</p>
+      </p>
+      <img src="./Singh nagar.png" alt="Map showing our locations" style="max-width: 90%; height: auto; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
+    </section>
+    
+
+    <!-- Moments Section -->
+    <div class="section animate__animated animate__fadeInUp">
+      <h2>Our Precious Moments</h2>
+      <p>Every moment with you is a treasure I hold dear.</p>
+      <div class="gallery">
+        <div class="photo-card">
+          <img src="./Your paragraph text (1).jpg" alt="Our Special Moment 1" />
+          <div class="photo-overlay">
+            <h3 style="color: #333; font-weight: 300;">First Meeting</h3>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="./Your paragraph text (2).jpg" alt="Our Special Moment 2" />
+          <div class="photo-overlay">
+            <h3 style="color: #333; font-weight: 500;">Alfa vibes</h3>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="./Your paragraph text (3).jpg" alt="Our Special Moment 3" />
+          <div class="photo-overlay">
+            <h3 style="color: #333; font-weight: 500;">First Cafe</h3>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="./abc.jpg" alt="Our Special Moment 3" />
+          <div class="photo-overlay">
+            <h3 style="color: #333; font-weight: 500;">Infinitus 2024</h3>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="./Your paragraph text (4).jpg" alt="Our Special Moment 4" />
+          <div class="photo-overlay">
+            <h3 style="color: #333; font-weight: 300;">First temple visit</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Generated Couple Images Section -->
+    <div class="section animate__animated animate__fadeInUp">
+      <h2>Our Moments in AI's Vision</h2>
+      <p>Imagining our moments together through the magic of AI.</p>
+      <div class="gallery">
+        <div class="photo-card">
+          <img src="./Your paragraph text.jpg" alt="AI Generated Couple Image 1" />
+          <div class="photo-overlay">
+            <h3 style="color: #333; font-weight: 300;">Celebrating Diversity</h3>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="./abc (2).jpg" alt="AI Generated Couple Image 2" />
+          <div class="photo-overlay">
+            <h3 style="color: #333; font-weight: 500;">Favourite Outfits</h3>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="./abc (3).jpg" alt="AI Generated Couple Image 3" />
+          <div class="photo-overlay">
+            <h3 style="color: #333; font-weight: 300;">Ghibli Trend</h3>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    
+    <p class="copyright">
+      &copy; 2023 pottikanna.2819. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    // Animate timeline items when scrolled into view
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+    
+    function animateOnScroll() {
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      timelineItems.forEach(item => {
+        if (isInViewport(item)) {
+          item.classList.add('visible');
+        }
+      });
+    }
+    
+    // Animate counters
+    function animateCounter(id, target, duration) {
+      const obj = document.getElementById(id);
+      const start = 0;
+      const range = target - start;
+      const increment = target > start ? 1 : -1;
+      const stepTime = Math.abs(Math.floor(duration / range));
+      let current = start;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        obj.textContent = current;
+        if (current == target) {
+          clearInterval(timer);
+        }
+      }, stepTime);
+    }
+    
+    // Calculate and update time difference
+    function updateTimeDifference() {
+      const startDate = new Date('2023-09-03'); // Start date: September 3, 2023
+      const currentDate = new Date();
+      
+      // Calculate years, months, and days
+      let years = currentDate.getFullYear() - startDate.getFullYear();
+      let months = currentDate.getMonth() - startDate.getMonth();
+      
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+      
+      // Calculate days
+      let tempDate = new Date(currentDate);
+      tempDate.setDate(0); // Go to last day of previous month
+      const daysInLastMonth = tempDate.getDate();
+      
+      let days = currentDate.getDate();
+      if (startDate.getDate() > days) {
+        months--;
+        if (months < 0) {
+          years--;
+          months += 12;
+        }
+        days += daysInLastMonth;
+      }
+      days -= startDate.getDate();
+      
+      // Update counters
+      document.getElementById('years-counter').textContent = years;
+      document.getElementById('months-counter').textContent = months;
+      document.getElementById('days-counter').textContent = days;
+      
+      // Update every minute
+      setTimeout(updateTimeDifference, 60000);
+    }
+    
+    // Audio player functionality
+    document.addEventListener('DOMContentLoaded', function() {
+  const playButtons = document.querySelectorAll('.play-button');
+  let currentlyPlaying = null;
+
+  // Format time in MM:SS
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+  }
+
+  // Update progress bar and time
+  function updateProgress(audio, progressBar, timeDisplay) {
+    const progress = (audio.currentTime / audio.duration) * 100;
+    progressBar.style.width = `${progress}%`;
+    timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+  }
+
+  // Handle progress bar click
+  function handleProgressClick(e, audio) {
+    const progressBar = e.currentTarget;
+    const clickPosition = e.offsetX;
+    const progressBarWidth = progressBar.offsetWidth;
+    const seekTime = (clickPosition / progressBarWidth) * audio.duration;
+    audio.currentTime = seekTime;
+  }
+
+  playButtons.forEach(button => {
+    const songId = button.getAttribute('data-song');
+    const audio = document.getElementById(`${songId}-audio`);
+    const icon = document.getElementById(`${songId}-icon`);
+    const progressBar = document.querySelector(`.music-progress[data-song="${songId}"] .music-progress-bar`);
+    const timeDisplay = document.getElementById(`${songId}-time`);
+
+    // Set up progress bar click handler
+    document.querySelector(`.music-progress[data-song="${songId}"]`).addEventListener('click', (e) => {
+      handleProgressClick(e, audio);
+    });
+
+    // Update progress and time while playing
+    audio.addEventListener('timeupdate', () => {
+      updateProgress(audio, progressBar, timeDisplay);
+    });
+
+    // Update duration when metadata is loaded
+    audio.addEventListener('loadedmetadata', () => {
+      timeDisplay.textContent = `0:00 / ${formatTime(audio.duration)}`;
+    });
+
+    button.addEventListener('click', function() {
+      // If there's another song playing, pause it
+      if (currentlyPlaying && currentlyPlaying !== audio) {
+        currentlyPlaying.pause();
+        currentlyPlaying.currentTime = 0;
+        document.getElementById(`${currentlyPlaying.id.replace('-audio', '')}-icon`).classList.remove('fa-pause');
+        document.getElementById(`${currentlyPlaying.id.replace('-audio', '')}-icon`).classList.add('fa-play');
+        document.querySelector(`[data-song="${currentlyPlaying.id.replace('-audio', '')}"]`).classList.remove('playing');
+      }
+
+      if (audio.paused) {
+        audio.play();
+        icon.classList.remove('fa-play');
+        icon.classList.add('fa-pause');
+        this.classList.add('playing');
+        currentlyPlaying = audio;
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        icon.classList.remove('fa-pause');
+        icon.classList.add('fa-play');
+        this.classList.remove('playing');
+        currentlyPlaying = null;
+      }
+    });
+
+  // Initialize animations
+  window.addEventListener('scroll', animateOnScroll);
+  animateOnScroll(); // Initial check
+
+  // Initialize counters
+  updateTimeDifference();
+});
+
+      
+      // Initialize animations
+      window.addEventListener('scroll', animateOnScroll);
+      animateOnScroll(); // Initial check
+      
+      // Initialize counters
+      updateTimeDifference();
+    });
+  </script>
+
+</body>
+</html>
